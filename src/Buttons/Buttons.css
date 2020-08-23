@@ -1,0 +1,22 @@
+.buttons {
+    display: flex;
+    width: 300px;
+    margin-top: 20px;
+}
+
+.buttons__num {
+    width: 140px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttons__func {
+    width: 140px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+
+.btn {
+    width: 46px;
+}
