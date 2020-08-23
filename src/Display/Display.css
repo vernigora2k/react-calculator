@@ -4,3 +4,7 @@
     border: 1px solid black;
     margin-top: 20px;
 }
+
+.display__input {
+    width: 96%;
+}
