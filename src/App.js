@@ -18,6 +18,11 @@ function App() {
       return
     }
 
+    if(buttonName === '%') {
+      console.log(result)
+      return
+    }
+
     if(buttonName === '=') {
       setResult(calculate(result))
       console.log(calculate(result))
