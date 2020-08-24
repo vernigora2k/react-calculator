@@ -5,12 +5,30 @@ import Buttons from './Buttons/Buttons'
 import { useState } from 'react'
 
 function App() {
-  const [currentNumber, setCurrentNumber] = useState(0)
+  const [result, setResult] = useState(1)
+
+  function btnPressed(buttonName) {
+    if(result === 0) {
+      setResult(buttonName)
+      console.log(buttonName)
+    }
+
+    if(buttonName === '=') {
+      console.log(calculate(result))
+      setResult(calculate(result))
+    }
+
+    setResult(result + buttonName)
+  }
+
+  function calculate(expression) {
+    return eval(expression)
+  }
 
   return (
     <div className="App">
-      <Display currentNumber={ currentNumber }/>
-      <Buttons/>
+      <Display result={result}/>
+      <Buttons btnClick={btnPressed}/>
     </div>
   );
 }
