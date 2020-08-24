@@ -4,7 +4,6 @@ import './Buttons.css'
 export default function Buttons({ btnClick }) {
     function handleSubmit(e) {
         e.preventDefault()
-        console.log(e.target.name)
         btnClick(e.target.name)
     }
 

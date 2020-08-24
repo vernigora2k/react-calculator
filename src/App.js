@@ -5,17 +5,23 @@ import Buttons from './Buttons/Buttons'
 import { useState } from 'react'
 
 function App() {
-  const [result, setResult] = useState(1)
+  const [result, setResult] = useState(0)
 
   function btnPressed(buttonName) {
+    if(buttonName === 'c') {
+      setResult(0)
+      return
+    }
+
     if(result === 0) {
       setResult(buttonName)
-      console.log(buttonName)
+      return
     }
 
     if(buttonName === '=') {
-      console.log(calculate(result))
       setResult(calculate(result))
+      console.log(calculate(result))
+      return
     }
 
     setResult(result + buttonName)
