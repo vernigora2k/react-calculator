@@ -7,7 +7,7 @@ import { useState } from 'react'
 function App() {
   const [result, setResult] = useState(0)
 
-  function btnPressed(buttonName) {
+  function checkBtnPressed(buttonName) {
     if(buttonName === 'c') {
       setResult(0)
       return
@@ -26,7 +26,6 @@ function App() {
 
     if(buttonName === '=') {
       setResult(calculate(result))
-      console.log(calculate(result))
       return
     }
 
@@ -40,7 +39,7 @@ function App() {
   return (
     <div className="App">
       <Display result={result}/>
-      <Buttons btnClick={btnPressed}/>
+      <Buttons btnClick={checkBtnPressed}/>
     </div>
   );
 }
