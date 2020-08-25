@@ -20,7 +20,6 @@ function App() {
 
     if(buttonName === '%') {
       console.log(result)
-      console.log(eval(result))
       return
     }
 
